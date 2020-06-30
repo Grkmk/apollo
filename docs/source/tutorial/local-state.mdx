@@ -467,7 +467,8 @@ interface AppResolvers extends Resolvers {
   Mutation: ResolverMap; // highlight-line
 }
 
-export const resolvers = {
+export const resolvers: AppResolvers = {
+  Launch: {...},
   Mutation: {
     addOrRemoveFromCart: (_, { id }: { id: string }, { cache }): string[] => {
       const queryResult = cache
